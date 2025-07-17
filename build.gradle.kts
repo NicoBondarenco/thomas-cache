@@ -186,10 +186,10 @@ kover {
 sonar {
     properties {
         property("sonar.projectName", "T.H.O.M.A.S. Cache")
-        property("sonar.projectKey", "thomas-cache")
-        property("sonar.login", System.getenv("THOMAS_CORE_SONAR_LOGIN"))
-        property("sonar.host.url", System.getenv("THOMAS_CORE_SONAR_URL"))
-        property("sonar.coverage.jacoco.xmlReportPaths", "${layout.buildDirectory.get()}/reports/kover/reportJvm.xml")
+        property("sonar.projectKey", "thomas-Cache")
+        property("sonar.login", System.getenv("THOMAS_CACHE_SONAR_LOGIN"))
+        property("sonar.host.url", System.getenv("THOMAS_CACHE_SONAR_URL"))
+        property("sonar.coverage.jacoco.xmlReportPaths", "${layout.buildDirectory.get()}/reports/kover/report.xml")
         property("sonar.verbose", true)
         property("sonar.qualitygate.wait", true)
     }
