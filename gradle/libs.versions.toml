@@ -1,0 +1,105 @@
+[versions]
+kotlin = "2.2.0"
+kotlinx-coroutines = "1.10.2"
+jvm = "JVM_21"
+jdk = "21"
+target = "VERSION_21"
+kover = "0.9.1"
+sonarqube = "6.2.0.5505"
+
+thomas-core = "1.0.0"
+
+logback-classic = "1.5.18"
+logback-kotlin = "7.0.7"
+
+junit-pioneer = "2.3.0"
+junit-jupiter = "5.12.1"
+
+mockito-core = "5.11.0"
+mockito-inline = "5.2.0"
+mockito-kotlin = "5.2.1"
+
+mockk-kotlin = "1.14.3"
+
+system-stubs = "2.1.8"
+
+skyscreamer-jsonassert = "1.5.3"
+
+caffeine-core = "3.2.0"
+caffeine-coroutines = "1.1.0"
+
+[plugins]
+kotlin-lang = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlinx-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
+sonarqube-scanner = { id = "org.sonarqube", version.ref = "sonarqube" }
+
+[libraries]
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-stdlib-common = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-stdlib-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-jvm = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-slf4j = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-slf4j", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-reactor = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-reactor", version.ref = "kotlinx-coroutines" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines" }
+
+thomas-core = { module = "com.thomas:thomas-core", version.ref = "thomas-core"}
+
+log-logback-classic = { module = "ch.qos.logback:logback-classic", version.ref = "logback-classic" }
+log-logback-kotlin = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "logback-kotlin" }
+
+junit-jupiter-pioneer = { module = "org.junit-pioneer:junit-pioneer", version.ref = "junit-pioneer" }
+junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit-jupiter" }
+junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit-jupiter" }
+junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params", version.ref = "junit-jupiter" }
+
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito-core" }
+mockito-junit = { module = "org.mockito:mockito-junit-jupiter", version.ref = "mockito-core" }
+mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockito-inline" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+
+mockk-kotlin = { module = "io.mockk:mockk", version.ref = "mockk-kotlin" }
+
+system-stubs-core = { module = "uk.org.webcompere:system-stubs-core", version.ref = "system-stubs" }
+system-stubs-jupiter = { module = "uk.org.webcompere:system-stubs-jupiter", version.ref = "system-stubs" }
+
+skyscreamer-jsonassert = { module = "org.skyscreamer:jsonassert", version.ref = "skyscreamer-jsonassert" }
+
+cache-caffeine-core = {module = "com.github.ben-manes.caffeine:caffeine", version.ref = "caffeine-core"}
+cache-caffeine-coroutines = {module = "dev.hsbrysk:caffeine-coroutines", version.ref = "caffeine-coroutines"}
+
+[bundles]
+kotlin-stdlib-all = [
+    "kotlin-stdlib-jdk8",
+    "kotlin-stdlib-common",
+    "kotlin-stdlib-reflect",
+]
+
+kotlinx-coroutines-all = [
+    "kotlinx-coroutines-core",
+    "kotlinx-coroutines-jvm",
+    "kotlinx-coroutines-slf4j",
+    "kotlinx-coroutines-reactor",
+]
+
+log-logback-all = [
+    "log-logback-classic",
+    "log-logback-kotlin",
+]
+
+junit-all = [
+    "kotlinx-coroutines-test",
+    "junit-jupiter-pioneer",
+    "junit-jupiter-api",
+    "junit-jupiter-engine",
+    "junit-jupiter-params",
+    "mockito-core",
+    "mockito-junit",
+    "mockito-inline",
+    "mockito-kotlin",
+    "mockk-kotlin",
+    "system-stubs-core",
+    "system-stubs-jupiter",
+    "skyscreamer-jsonassert",
+]
